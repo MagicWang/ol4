@@ -1,0 +1,24 @@
+{
+  "name": "ol4",
+  "version": "0.0.1",
+  "description": "custom build ol4 for typescript",
+  "main": "ol.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagicWang/ol4.git"
+  },
+  "keywords": [
+    "custom",
+    "ol4",
+    "typescript"
+  ],
+  "author": "MagicWang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagicWang/ol4/issues"
+  },
+  "homepage": "https://github.com/MagicWang/ol4#readme"
+}

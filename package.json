@@ -12,6 +12,10 @@
     "install": "node tasks/install.js",
     "postinstall": "closure-util update",
     "start": "node tasks/serve.js",
+    "build": "npm run build-js && npm run build-css && npm run build-ts",
+    "build-js": "node tasks/build.js config/ol-debug.json dist/ol-debug.js && node tasks/build.js config/ol.json dist/ol.js",
+    "build-css": "node_modules/.bin/cleancss css/ol.css -o dist/ol.css",
+    "build-ts": "xcopy ts dist /y",
     "lint": "eslint tasks test src examples transforms",
     "lint-package": "eslint --fix build/package",
     "pretest": "npm run lint",
@@ -138,8 +142,7 @@
       ]
     }
   },
-  "ext": [
-    {
+  "ext": [{
       "module": "rbush"
     },
     {
