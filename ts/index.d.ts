@@ -8214,6 +8214,70 @@ export namespace source {
 
     /**
      * @classdesc
+     * Layer source to cluster vector data. Works out of the box with point
+     * geometries. For other geometry types, or if not all geometries should be
+     * considered for clustering, a custom `geometryFunction` can be defined.
+     *
+     * @param options Constructor options.
+     * @api
+     */
+    class ClusterExt extends Vector {
+        /**
+         * @classdesc
+         * Layer source to cluster vector data. Works out of the box with point
+         * geometries. For other geometry types, or if not all geometries should be
+         * considered for clustering, a custom `geometryFunction` can be defined.
+         *
+         * @param options Constructor options.
+         * @api
+         */
+        constructor(options: olx.source.ClusterExtOptions);
+
+        /**
+         * Get a reference to the wrapped source.
+         * @return Source.
+         * @api
+         */
+        getSource(): Vector;
+
+        /**
+         * Get the distance in pixels between clusters.
+         * @return The distance in pixels.
+         * @api
+         */
+        getDistance(): number;
+
+        /**
+         * Set the distance in pixels between clusters.
+         * @param distance The distance in pixels.
+         * @api
+         */
+        setDistance(distance: number): void;
+        /**
+         * set gun camera direction visible
+         * @param flag 
+         */
+        setDirectionVisible(flag: boolean): void;
+        /**
+         * set single feature title visible
+         * @param flag 
+         */
+        setSingleTitleVisible(flag: boolean): void;
+        /**
+         * add small circle point to cluster point
+         * @param features 
+         */
+        addTempPoints(features: ol.Feature[]): void;
+        /**
+         * set cluster child type visible
+         * @param type 
+         * @param visible 
+         */
+        setClusterTypeVisible(type, visible): void;
+    }
+
+    /**
+     * @classdesc
      * Abstract base class; normally only used for creating subclasses and not
      * instantiated in apps.
      * Base class for sources providing a single image.
@@ -11997,6 +12061,21 @@ export namespace olx {
             projection?: ol.ProjectionLike;
             source: ol.source.Vector;
             wrapX?: boolean;
+        }
+
+        interface ClusterExtOptions {
+            attributions?: ol.AttributionLike;
+            distance?: number;
+            extent?: ol.Extent;
+            geometryFunction?: ((feature: ol.Feature) => ol.geom.Point);
+            format?: ol.format.Feature;
+            logo?: string;
+            projection?: ol.ProjectionLike;
+            source: ol.source.Vector;
+            wrapX?: boolean;
+            clusterTitleVisible?: boolean;
+            singleTitleVisible?: boolean;
+            directionVisible?: boolean;
         }
 
         type TileJSON = JSON;
