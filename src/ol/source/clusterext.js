@@ -129,6 +129,7 @@ ol.source.ClusterExt.prototype.setDistance = function (distance) {
 /**
  * set gun camera direction visible
  * @param {boolean} flag 
+ * @api
  */
 ol.source.ClusterExt.prototype.setDirectionVisible = function (flag) {
   this.directionVisible = !!flag;
@@ -137,6 +138,7 @@ ol.source.ClusterExt.prototype.setDirectionVisible = function (flag) {
 /**
  * set single feature title visible
  * @param {boolean} flag 
+ * @api
  */
 ol.source.ClusterExt.prototype.setSingleTitleVisible = function (flag) {
   this.singleTitleVisible = !!flag;
@@ -145,6 +147,7 @@ ol.source.ClusterExt.prototype.setSingleTitleVisible = function (flag) {
 /**
  * add small circle point to cluster point
  * @param {Array.<ol.Feature>} features 
+ * @api
  */
 ol.source.ClusterExt.prototype.addTempPoints = function (features) {
   if (this.tempFeatures && this.tempFeatures instanceof Array) {
@@ -161,6 +164,7 @@ ol.source.ClusterExt.prototype.addTempPoints = function (features) {
  * set cluster child type visible
  * @param {string} type 
  * @param {boolean} visible 
+ * @api
  */
 ol.source.ClusterExt.prototype.setClusterTypeVisible = function (type, visible) {
   if (type) {
