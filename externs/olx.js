@@ -1708,6 +1708,61 @@ olx.control.RotateOptions.prototype.resetNorth;
  */
 olx.control.RotateOptions.prototype.target;
 
+/**
+ * @typedef {{className: (string|undefined),
+ *     href: (string|undefined),
+ *     src: (string|undefined),
+ *     target: (Element|string|undefined),
+ *     render: (function(ol.MapEvent)|undefined)}}
+ */
+olx.control.LogoOptions;
+
+
+/**
+ * CSS class name. Default is `ol-logo`.
+ * @type {string|undefined}
+ * @api
+ */
+olx.control.LogoOptions.prototype.className;
+
+
+/**
+ * logo href
+ * @type {string|undefined}
+ * @api
+ */
+olx.control.LogoOptions.prototype.href;
+
+
+/**
+ * logo src
+ * @type {string|undefined}
+ * @api
+ */
+olx.control.LogoOptions.prototype.src;
+
+/**
+ * attribution
+ * @type {string|undefined}
+ * @api
+ */
+olx.control.LogoOptions.prototype.attribution;
+
+/**
+ * Function called when the control should be re-rendered. This is called
+ * in a requestAnimationFrame callback.
+ * @type {function(ol.MapEvent)|undefined}
+ * @api
+ */
+olx.control.LogoOptions.prototype.render;
+
+/**
+ * Specify a target if you want the control to be rendered outside of the map's
+ * viewport.
+ * @type {Element|string|undefined}
+ * @api
+ */
+olx.control.LogoOptions.prototype.target;
 
 /**
  * @typedef {{duration: (number|undefined),

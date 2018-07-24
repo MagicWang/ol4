@@ -83,6 +83,22 @@
   visibility: hidden;
   transition: opacity .25s linear, visibility 0s linear .25s;
 }
+.ol-logo {
+  left: 0;
+  bottom: 0;
+  background: transparent;
+}
+.ol-logo:hover {
+  background-color: transparent;
+}
+.ol-logo-img {
+  width: 32px;
+  height: 32px;
+}
+.ol-logo-span {
+  background: rgba(255,255,255,0.4);
+  padding: 2px;
+}
 .ol-zoom-extent {
   top: 4.643em;
   left: .5em;

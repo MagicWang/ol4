@@ -646,6 +646,26 @@ export namespace control {
 
     /**
      * @classdesc
+     * A logo control to show logo.
+     * To style this control use css selector `.ol-logo`.
+     *
+     * @param opt_options Logo options.
+     * @api stable
+     */
+    class Logo extends Control {
+        /**
+         * @classdesc
+         * A logo control to show logo.
+         * To style this control use css selector `.ol-logo`.
+         *
+         * @param opt_options Logo options.
+         * @api stable
+         */
+        constructor(opt_options?: olx.control.LogoOptions);
+    }
+
+    /**
+     * @classdesc
      * A control displaying rough y-axis distances, calculated for the center of the
      * viewport. For conformal projections (e.g. EPSG:3857, the default view
      * projection in OpenLayers), the scale is valid for all directions.
@@ -11609,6 +11629,15 @@ export namespace olx {
             autoHide?: boolean;
             render?: ((event: ol.MapEvent) => any);
             resetNorth?: (() => any);
+            target?: Element;
+        }
+
+        interface LogoOptions {
+            className?: string;
+            href?: string;
+            src?: string;
+            attribution?: string;
+            render?: ((event: ol.MapEvent) => any);
             target?: Element;
         }
 
