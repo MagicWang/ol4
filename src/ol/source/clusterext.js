@@ -275,6 +275,7 @@ ol.source.ClusterExt.prototype.createCluster = function (features, type) {
     if (this.directionVisible && markerModel && markerModel.rotation !== undefined) {
       var clusterShadow = new ol.Feature(new ol.geom.Point(centroid));
       clusterShadow.set("featureType", "shadow");
+      clusterShadow.set("id", markerModel.id);
       clusterShadow.set("type", type);
       clusterShadow.set("rotation", markerModel.rotation);
       this.features_.push(clusterShadow);
